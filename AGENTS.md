@@ -5,8 +5,8 @@ Single-file Python synthetic dataset generator for API metadata (zombie/active/d
 ## Run
 
 ```bash
-python generate_api_dataset.py             # generate 100M records → data/zombie.csv
-python generate_api_dataset.py 1000000      # specify record count
+python generate_api_dataset.py             # generate 100k records → data/zombie.csv
+python generate_api_dataset.py 100000      # specify record count
 ```
 
 - No dependencies beyond Python stdlib (3.14).
@@ -23,7 +23,7 @@ python generate_api_dataset.py 1000000      # specify record count
 
 ## Gotchas
 
-- No `.gitignore` — `data/*.csv`, `__pycache__/`, `.DS_Store` are all untracked.
-- No tests, no linting, no typechecking configured.
-- Default 100M records is expensive (~several minutes, large CSV).
+- No `.gitignore` — `data/*.csv`, `__pycache__/`, `.DS_Store` are all untracked. (Added .gitignore ver=python)
+- No tests, no linting, no typechecking configured. (To configure in the new session)
+- Default 100M records is expensive (~several minutes, large CSV). (Downgraded to 100k)
 - Profile distribution: Active 41.7%, Deprecated 25.0%, Orphaned 16.6%, Zombie 16.7%.
